@@ -2,6 +2,7 @@ package com.oracle.ugbu.opower;
 
 import com.oracle.ugbu.opower.resources.SomeAPIResource;
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -18,7 +19,7 @@ public class ReactApplication extends Application<ReactApplicationConfiguration>
 
     @Override
     public void initialize(final Bootstrap<ReactApplicationConfiguration> bootstrap) {
-        super.initialize(bootstrap);
+        bootstrap.addBundle(new AssetsBundle("/web", "/", "index.html", "assets"));
     }
 
     @Override
