@@ -1,5 +1,6 @@
 package com.oracle.ugbu.opower;
 
+import com.oracle.ugbu.opower.resources.SomeAPIResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -17,13 +18,13 @@ public class ReactApplication extends Application<ReactApplicationConfiguration>
 
     @Override
     public void initialize(final Bootstrap<ReactApplicationConfiguration> bootstrap) {
-
+        super.initialize(bootstrap);
     }
 
     @Override
     public void run(final ReactApplicationConfiguration configuration,
                     final Environment environment) {
-
+        environment.jersey().register(new SomeAPIResource());
     }
 
 }
