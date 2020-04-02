@@ -2,3 +2,6 @@ logging:
   level: INFO
   loggers:
     com.oracle.ugbu.opower: DEBUG
+
+server:
+  rootPath: /api/
