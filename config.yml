@@ -5,3 +5,8 @@ logging:
 
 server:
   rootPath: /api/
+  applicationConnectors:
+    - type: h2
+      port: 8085
+      keyStorePath: keystore # required
+      keyStorePassword: 12345678
