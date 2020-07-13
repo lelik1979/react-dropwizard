@@ -1,4 +1,4 @@
-package com.oracle.ugbu.opower;
+package org.lelik.react.dropwizard;
 
 import io.dropwizard.Configuration;
 

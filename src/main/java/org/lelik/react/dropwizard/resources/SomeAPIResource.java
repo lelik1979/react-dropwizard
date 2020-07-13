@@ -1,4 +1,4 @@
-package com.oracle.ugbu.opower.resources;
+package org.lelik.react.dropwizard.resources;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;

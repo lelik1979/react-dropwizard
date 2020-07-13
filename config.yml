@@ -1,12 +1,12 @@
 logging:
   level: INFO
   loggers:
-    com.oracle.ugbu.opower: DEBUG
+    org.lelik: DEBUG
 
 server:
   rootPath: /api/
   applicationConnectors:
     - type: h2
-      port: 8085
+      port: 8080
       keyStorePath: keystore # required
       keyStorePassword: 12345678

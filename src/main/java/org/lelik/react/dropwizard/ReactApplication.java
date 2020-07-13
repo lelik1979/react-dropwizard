@@ -1,6 +1,6 @@
-package com.oracle.ugbu.opower;
+package org.lelik.react.dropwizard;
 
-import com.oracle.ugbu.opower.resources.SomeAPIResource;
+import org.lelik.react.dropwizard.resources.SomeAPIResource;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
