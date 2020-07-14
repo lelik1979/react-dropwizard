@@ -33,8 +33,9 @@ public class App {
                 .build();
         Request request = new Request.Builder().url("https://localhost:8080/api/someApi").build();
         okhttp3.Response response = okHttpClient.newCall(request).execute();
-        System.out.println("Protocol: " + response.protocol());
-        System.out.println(response.body().string());
+        System.out.println("Request: " + request);
+        System.out.println("Response: " + response);
+        System.out.println("Body: " + response.body().string());
 
     }
 
