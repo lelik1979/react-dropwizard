@@ -8,5 +8,5 @@ server:
   applicationConnectors:
     - type: h2
       port: 8080
-      keyStorePath: keystore # required
+      keyStorePath: dropwizard-react-server/keystore # required
       keyStorePassword: 12345678
