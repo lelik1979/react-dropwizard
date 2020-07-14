@@ -24,3 +24,5 @@ hs_err_pid*
 /src/main/web/yarn.lock
 /classes/web/node/yarn/dist/
 /classes/web/node/node
+/dropwizard-react-server/classes/web/node/
+/dropwizard-react-server/src/main/web/public/
