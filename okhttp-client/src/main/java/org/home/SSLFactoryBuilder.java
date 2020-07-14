@@ -11,6 +11,8 @@ import javax.net.ssl.TrustManagerFactory;
 
 public class SSLFactoryBuilder {
 
+    private SSLFactoryBuilder() {}
+
     public static SSLSocketFactory createSSLConnectionFactory(String certificateUrl, TrustManagerFactory trustManager) throws Exception {
 
         CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");

@@ -14,7 +14,7 @@ import java.security.Security;
 public class App {
 
     //Due to it is self signed certificate on server I need to add it to the trust store on the client side too.
-    public static final String certFileLocation = "okhttp-client/localhost.cer";
+    public static final String CERT_FILE_LOCATION = "okhttp-client/localhost.cer";
 
     static {
         // switch to use Conscrypt library for http2
@@ -25,13 +25,13 @@ public class App {
         TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(
                 TrustManagerFactory.getDefaultAlgorithm());
 
-        SSLSocketFactory sslFactory = SSLFactoryBuilder.createSSLConnectionFactory(certFileLocation, trustManagerFactory);
+        SSLSocketFactory sslFactory = SSLFactoryBuilder.createSSLConnectionFactory(CERT_FILE_LOCATION, trustManagerFactory);
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .sslSocketFactory(sslFactory, (X509TrustManager) trustManagerFactory.getTrustManagers()[0])
                 // this is only require to fix self signed certificate verification
                 .hostnameVerifier((hostname, session) -> true)
                 .build();
-        Request request = new Request.Builder().url("https://localhost:8080/api/someApi").build();
+        Request request = new Request.Builder().url("https://localhost:8085/api/someApi").build();
         okhttp3.Response response = okHttpClient.newCall(request).execute();
         System.out.println("Request: " + request);
         System.out.println("Response: " + response);
