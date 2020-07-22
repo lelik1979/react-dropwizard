@@ -60,7 +60,6 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-http2</artifactId>
-<!--            <version>${dropwizard.version}</version>-->
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -82,8 +81,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.1.2</version>
-                <configuration>
-                </configuration>
                 <dependencies>
                     <!-- Obtain the maven-dependency-analyzer:1.11.1 which supports Java 11,
                          otherwise maven-dependency-plugin:3.1.1 will use the old version of the analyzer
@@ -108,52 +105,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.33.0</version>
-                <configuration>
-                    <verbose>true</verbose>
-                    <images>
-                        <image>
-                            <alias>service</alias>
-                            <!-- image name -->
-                            <name>home/${project.artifactId}:${project.version}</name>
-                            <build>
-                                <tags>
-                                    <!-- tags applied to the image -->
-                                    <tag>latest</tag>
-                                    <tag>${project.version}</tag>
-                                </tags>
-                                <!-- means we will use predefine Dockerfile from src/main/docker -->
-                                <dockerFile>Dockerfile</dockerFile>
-                                <assembly>
-                                    <inline>
-                                        <fileSets>
-                                            <fileSet>
-                                                <!-- copy required config and files to the container -->
-                                                <directory>src/main/docker</directory>
-                                                <outputDirectory>./</outputDirectory>
-                                                <includes>
-                                                    <include>config.yml</include>
-                                                    <include>keystore</include>
-                                                </includes>
-                                            </fileSet>
-                                            <fileSet>
-                                                <directory>target</directory>
-                                                <outputDirectory>./</outputDirectory>
-                                                <includes>
-                                                    <include>${project.build.finalName}.jar</include>
-                                                </includes>
-                                            </fileSet>
-                                        </fileSets>
-                                    </inline>
-                                </assembly>
-                            </build>
-                        </image>
-                    </images>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.github.eirslett</groupId>

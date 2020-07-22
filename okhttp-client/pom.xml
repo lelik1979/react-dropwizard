@@ -27,19 +27,4 @@
         </dependency>
     </dependencies>
 
-    <!-- this is only required to disable Docker processing because we added
-    pluginGroup to settings.xml which affect now all projects. -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>1.2.2</version>
-                <configuration>
-                    <skipDocker>true</skipDocker>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
