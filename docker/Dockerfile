@@ -13,8 +13,8 @@ ARG ARTIFACT
 ENV KEYSTORE_PATH=/var/service/keystore
 ENV KEYSTORE_PASSWORD=12345678
 
-COPY maven/$ARTIFACT /var/service/service.jar
-COPY maven/config.yml /var/service/config.yml
-COPY maven/keystore ${KEYSTORE_PATH}
+COPY $ARTIFACT /var/service/service.jar
+COPY config.yml /var/service/config.yml
+COPY keystore ${KEYSTORE_PATH}
 
 CMD java -jar /var/service/service.jar server config.yml
