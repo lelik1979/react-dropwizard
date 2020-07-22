@@ -21,5 +21,5 @@ cp $ARTIFACT $DOCKER_CONTEXT_DIRECTORY/$ARTIFACT_NAME
 
 docker build -f $DOCKER_CONTEXT_DIRECTORY/Dockerfile \
             --build-arg ARTIFACT=$ARTIFACT_NAME \
-            -t home/dropwizard-react-server:$ARTIFACT_VERSION \
+            -t lelik/dropwizard-react:$ARTIFACT_VERSION \
             $DOCKER_CONTEXT_DIRECTORY
