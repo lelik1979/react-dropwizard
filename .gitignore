@@ -21,3 +21,4 @@ hs_err_pid*
 /dropwizard-react-server/node_modules/
 /release.properties
 /nexus-data/
+**/*.releaseBackup

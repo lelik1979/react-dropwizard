@@ -27,10 +27,9 @@
     </distributionManagement>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/lelik1979/react-dropwizard.git</developerConnection>
         <connection>scm:git:https://github.com/lelik1979/react-dropwizard.git</connection>
         <url>https://github.com/lelik1979/react-dropwizard.git</url>
-      <tag>HEAD</tag>
+        <tag>HEAD</tag>
   </scm>
 
     <modules>
