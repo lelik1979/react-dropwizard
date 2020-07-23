@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:11
 
 RUN mkdir -p /var/service/log && \
     mkdir -p /var/service/config && \
@@ -9,9 +9,10 @@ WORKDIR /var/service/
 USER nobody
 
 ARG ARTIFACT
+ARG KEYSTORE_PASSWORD
 
 ENV KEYSTORE_PATH=/var/service/keystore
-ENV KEYSTORE_PASSWORD=12345678
+ENV KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD
 
 COPY $ARTIFACT /var/service/service.jar
 COPY config.yml /var/service/config.yml

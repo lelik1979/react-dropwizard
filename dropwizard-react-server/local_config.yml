@@ -1,0 +1,14 @@
+logging:
+  level: INFO
+  loggers:
+    org.lelik: DEBUG
+
+server:
+  rootPath: /api/
+  applicationConnectors:
+    - type: http
+      port: 8080
+    - type: h2 #http2 protocol connection
+      port: 8085
+      keyStorePath: ../docker/keystore # required
+      keyStorePassword: 12345678
