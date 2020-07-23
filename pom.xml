@@ -18,6 +18,15 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>docker nexus server</id>
+            <name>Docker Nexus service</name>
+            <url>http://localhost:18081/repository/my-releases/</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
+
     <scm>
         <developerConnection>scm:git:git://github.com/lelik1979/react-dropwizard</developerConnection>
     </scm>

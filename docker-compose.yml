@@ -1,0 +1,17 @@
+---
+version: "3.7"
+
+services:
+  nexus:
+    image: sonatype/nexus3
+    volumes:
+    - ./nexus-data:/nexus-data
+    ports:
+      - "18081:8081"
+
+#  mysql:
+#    image: docker.va.opower.it/opower/mysql:5.6
+#    environment:
+#      - MYSQL_USER=poseur
+#      - MYSQL_PASSWORD=poseur
+#      - MYSQL_DATABASES=enrollment
