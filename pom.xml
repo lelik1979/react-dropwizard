@@ -18,9 +18,23 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <scm>
+        <developerConnection>scm:git:git://github.com/lelik1979/react-dropwizard</developerConnection>
+    </scm>
+
     <modules>
         <module>dropwizard-react-server</module>
         <module>okhttp-client</module>
     </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M1</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

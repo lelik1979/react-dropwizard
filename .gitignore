@@ -19,3 +19,4 @@ hs_err_pid*
 /dropwizard-react-server/src/main/web/public/
 /dropwizard-react-server/yarn.lock
 /dropwizard-react-server/node_modules/
+/release.properties
