@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #CHANGE VERSION to what you need.
-ARTIFACT_VERSION=0.0.1-SNAPSHOT
+ARTIFACT_VERSION=0.0.1
 ARTIFACT_NAME=dropwizard-react-server-$ARTIFACT_VERSION.jar
 
 ARTIFACT=dropwizard-react-server/target/$ARTIFACT_NAME

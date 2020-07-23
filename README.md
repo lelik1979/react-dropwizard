@@ -11,7 +11,7 @@ How to start the POC how to use dropwizard and react application
     ./create_docker_image.sh
    ```
    if you need to push it 
-   ```docker push lelik/dropwizard-react:0.0.1-SNAPSHOT```
+   ```docker push lelik/dropwizard-react:0.0.1```
 1. Start application with `java -Xbootclasspath/p:alpn-boot-8.1.13.v20181017.jar -jar dropwizard-react-server/target/dropwizard-react-server-1.0-SNAPSHOT.jar server dropwizard-react-server/config/config.yml`
 1. To check that your application is running enter url `https://localhost:8080`
 

@@ -6,7 +6,7 @@
 
     <groupId>org.home.lelik</groupId>
     <artifactId>dropwizard-react</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>POC how React can be integrated into Dropwizard service</name>
@@ -29,6 +29,8 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/lelik1979/react-dropwizard.git</developerConnection>
+        <connection>scm:git:https://github.com/lelik1979/react-dropwizard.git</connection>
+        <url>https://github.com/lelik1979/react-dropwizard.git</url>
     </scm>
 
     <modules>
